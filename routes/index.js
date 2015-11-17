@@ -2,8 +2,10 @@ var express = require('express');
 var router = express.Router();
 var pg = require('pg');
 var connectionString = 'postgres://foo:bar@localhost:5432/test';
-/* GET home page. */
 
+/* Note: there is no seperation between model and controller in this app*/
+
+/* GET home page. */
 router.get('/', function(req, res, next) {
   var cities = [];
   pg.connect(connectionString, function(err, client, done) {

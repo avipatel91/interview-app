@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
         var query = client.query("SELECT * FROM cities", function(err, result) {
         if(err) {
  	    done();
-	    res.render('index', {error: "Uh-oh, you deleted the table. You hacker you."});
+	    res.render('index', {error: "Uh-oh, there was an error fetching the table. You hacker you."});
 	    return console.error('error running query', err);
 	  }	
 	});

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  
+  h1 Cities
+  if error
+    h2= error
+  else
+    ul
+      for city in cities
+        li= city
+
+  form(name="city-form", action="/", method="post")
+    input(type="city", name="city")
+    input(type="submit", value="Submit")
